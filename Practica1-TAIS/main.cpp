@@ -46,27 +46,19 @@ void ejercicio2() {
     
     AVL<int, int> a;
     
+    a.inserta(20, 20);
     a.inserta(10, 10);
-    a.inserta(100, 100);
     a.inserta(30, 30);
+    a.inserta(5, 5);
+    a.inserta(15, 15);
+    a.inserta(40, 40);
+    a.inserta(4, 4);
     
     a.mostrar(cout, 0);
-    cout << endl;
     
-    a.inserta(80, 80);
-    
-    a.mostrar(cout, 0);
-    cout << endl;
-    
-    a.inserta(50, 50);
+    a.inserta(2, 2);
     
     a.mostrar(cout, 0);
-    cout << endl;
-    
-    a.;
-    
-    a.mostrar(cout, 0);
-    cout << endl;
 }
 
 void ejercicio3() {
@@ -80,7 +72,7 @@ void ejercicio4() {
 
 int main(int argc, const char * argv[])
 {
-    ejercicio1();
+//    ejercicio1();
     
     ejercicio2();
     
