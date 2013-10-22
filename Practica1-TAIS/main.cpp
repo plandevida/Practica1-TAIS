@@ -9,6 +9,7 @@
 #include <iostream>
 #include <string>
 #include "AVL.h"
+#include "Lista.h"
 
 template <typename Clave, typename Valor>
 void verificarArbol(AVL<Clave, Valor> a) {
@@ -53,28 +54,56 @@ void ejercicio2() {
     a.inserta(15, 15);
     a.inserta(40, 40);
     a.inserta(4, 4);
-    
-    a.mostrar(cout, 0);
-    
     a.inserta(2, 2);
+    a.inserta(6, 6);
     
     a.mostrar(cout, 0);
+    cout << endl;
+    
+    int kesimo = 4;
+    
+    cout << "elemento k-ésimo: " << kesimo << " -> " << a.kesimoelementominimo(kesimo) << endl;
 }
 
 void ejercicio3() {
     
+    AVL<int, int> a;
     
+    a.inserta(20, 20);
+    a.inserta(10, 10);
+    a.inserta(30, 30);
+    a.inserta(5, 5);
+    a.inserta(15, 15);
+    a.inserta(40, 40);
+    a.inserta(4, 4);
+    a.inserta(2, 2);
+    a.inserta(6, 6);
+    
+    a.mostrar(cout, 0);
+    
+    Lista<int> lista = a.rango(5, 30);
+    
+    cout << "rango de claves :" << endl;
+    
+    Lista<int>::Iterador it = lista.principio();
+    
+    while ( it != lista.final() ) {
+        
+        cout << "\t" << it.elem() << endl;
+        it.avanza();
+    }
 }
 
 void ejercicio4() {
-    
 }
 
 int main(int argc, const char * argv[])
 {
-//    ejercicio1();
+    ejercicio1();
     
-    ejercicio2();
+//    ejercicio2();
+    
+    ejercicio3();
     
     return 0;
 }
