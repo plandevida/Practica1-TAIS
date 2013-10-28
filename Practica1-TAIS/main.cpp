@@ -95,15 +95,39 @@ void ejercicio3() {
 }
 
 void ejercicio4() {
+    
+    AVL<int, int> a;
+    
+    for ( int i = 1 ; i <= 16; i++) {
+        a.inserta(i, i);
+    }
+    
+    a.mostrar(cout, 0, true);
+    
+    a.borra(4);
+    a.borra(8);
+    a.borra(14);
+    
+    a.mostrar(cout, 0, true);
 }
 
 int main(int argc, const char * argv[])
 {
-    ejercicio1();
+//    ejercicio1();
     
 //    ejercicio2();
     
-    ejercicio3();
+//    ejercicio3();
+    
+    ejercicio4();
+    
+//    AVL<int, int> a;
+//    
+//    a.inserta(4, 4);
+//    
+//    int b = a.obtenerPadre(4);
+//    
+//    cout << b << endl;
     
     return 0;
 }
