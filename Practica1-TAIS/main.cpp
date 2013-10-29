@@ -98,47 +98,72 @@ void ejercicio4() {
     
     AVL<int, int> a;
     
-//    for ( int i = 1 ; i <= 16; i++) {
-//        a.inserta(i, i);
-//    }
+    for ( int i = 1 ; i <= 16; i++) {
+        a.inserta(i, i);
+    }
     
-//    a.mostrar(cout, 0, true);
-//    
-//    a.borra(8);
-//    
-//    a.mostrar(cout, 0, true);
-//    
-//    a.borra(9);
-//    
-//    a.mostrar(cout, 0, true);
-//    
-//    a.borra(10);
-//    
-//    a.mostrar(cout, 0, true);
+    a.mostrar(cout, 0, true);
+    
+    a.borra(8);
+    
+    a.mostrar(cout, 0, true);
+    
+    a.borra(9);
+    
+    a.mostrar(cout, 0, true);
+    
+    a.borra(10);
+    
+    a.mostrar(cout, 0, true);
     
     AVL<int, int> b;
     
     for ( int i = 1 ; i <= 16; i++) {
         b.inserta(i, i);
     }
+//
+//    b.mostrar(cout, 0, true);
+//    
+//    b.borra(4);
+//    
+//    b.mostrar(cout, 0, true);
+//    
+//    b.borra(5);
+//    
+//    b.mostrar(cout, 0, true);
+//    
+//    b.borra(6);
+//    
+//    b.mostrar(cout, 0, true);
+//    
+//    b.borra(7);
+//    
+//    b.mostrar(cout, 0, true);
     
-    b.mostrar(cout, 0, true);
     
-    b.borra(4);
-    
-    b.mostrar(cout, 0, true);
-    
-    b.borra(5);
-    
-    b.mostrar(cout, 0, true);
-    
-    b.borra(6);
-    
-    b.mostrar(cout, 0, true);
-    
-    b.borra(7);
-    
-    b.mostrar(cout, 0, true);
+//    AVL<int, int> c;
+//    
+//    for ( int i = 1 ; i <= 16; i++) {
+//        c.inserta(i, i);
+//    }
+//    
+//    c.mostrar(cout, 0, true);
+//    
+//    c.borra(4);
+//    
+//    c.mostrar(cout, 0, true);
+//    
+//    c.borra(12);
+//    
+//    c.mostrar(cout, 0, true);
+//    
+//    c.borra(1);
+//    
+//    c.mostrar(cout, 0, true);
+//    
+//    c.borra(3);
+//    
+//    c.mostrar(cout, 0, true);
 }
 
 int main(int argc, const char * argv[])
