@@ -174,7 +174,21 @@ int main(int argc, const char * argv[])
     
 //    ejercicio3();
     
-    ejercicio4();
+//    ejercicio4();
+    
+    AVL<int, int> a;
+    
+    a.inserta(20, 20);
+    a.inserta(10, 10);
+    a.inserta(30, 30);
+    a.inserta(5, 5);
+    a.inserta(15, 15);
+    a.inserta(25, 25);
+    
+    verificarArbol(a);
+    a.mostrar(cout, 0);
+//    cout << "TRUE: " << true << endl;
+//    cout << a.esAVLcorrecto();
     
     return 0;
 }
