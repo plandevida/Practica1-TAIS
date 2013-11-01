@@ -102,43 +102,45 @@ void ejercicio4() {
         a.inserta(i, i);
     }
     
-    a.mostrar(cout, 0, true);
+//    a.inserta(16, 16);
     
-    a.borra(8);
-    
-    a.mostrar(cout, 0, true);
-    
-    a.borra(9);
-    
-    a.mostrar(cout, 0, true);
-    
-    a.borra(10);
-    
-    a.mostrar(cout, 0, true);
+//    a.mostrar(cout, 0, true);
+//    
+//    a.borra(8);
+//    
+//    a.mostrar(cout, 0, true);
+//    
+//    a.borra(9);
+//    
+//    a.mostrar(cout, 0, true);
+//    
+//    a.borra(10);
+//    
+//    a.mostrar(cout, 0, true);
     
     AVL<int, int> b;
     
     for ( int i = 1 ; i <= 16; i++) {
         b.inserta(i, i);
     }
-//
-//    b.mostrar(cout, 0, true);
-//    
-//    b.borra(4);
-//    
-//    b.mostrar(cout, 0, true);
-//    
-//    b.borra(5);
-//    
-//    b.mostrar(cout, 0, true);
-//    
-//    b.borra(6);
-//    
-//    b.mostrar(cout, 0, true);
-//    
-//    b.borra(7);
-//    
-//    b.mostrar(cout, 0, true);
+
+    b.mostrar(cout, 0, true);
+    
+    b.borra(4);
+    
+    b.mostrar(cout, 0, true);
+    
+    b.borra(5);
+    
+    b.mostrar(cout, 0, true);
+    
+    b.borra(6);
+    
+    b.mostrar(cout, 0, true);
+    
+    b.borra(7);
+    
+    b.mostrar(cout, 0, true);
     
     
 //    AVL<int, int> c;
@@ -174,21 +176,7 @@ int main(int argc, const char * argv[])
     
 //    ejercicio3();
     
-//    ejercicio4();
-    
-    AVL<int, int> a;
-    
-    a.inserta(20, 20);
-    a.inserta(10, 10);
-    a.inserta(30, 30);
-    a.inserta(5, 5);
-    a.inserta(15, 15);
-    a.inserta(25, 25);
-    
-    verificarArbol(a);
-    a.mostrar(cout, 0);
-//    cout << "TRUE: " << true << endl;
-//    cout << a.esAVLcorrecto();
+    ejercicio4();
     
     return 0;
 }
