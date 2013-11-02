@@ -19,6 +19,18 @@ void verificarArbol(AVL<Clave, Valor> a) {
     std::cout << "Es equilibrado?: " << estado << endl;
 }
 
+template <typename Clave, typename Valor>
+AVL<Clave, Valor> generarArbol(const int numeros, const int incremento) {
+    
+    AVL<Clave, Valor> a;
+    
+    for (int i = 0; i < numeros; i+=incremento) {
+        a.inserta(i,i);
+    }
+    
+    return a;
+}
+
 void ejercicio1() {
     
     
@@ -96,20 +108,18 @@ void ejercicio3() {
 
 void ejercicio4() {
     
-    AVL<int, int> a;
-    
-    for ( int i = 1 ; i <= 16; i++) {
-        a.inserta(i, i);
-    }
-    
-//    a.inserta(16, 16);
-    
+//    AVL<int, int> a;
+//    
+//    for ( int i = 1 ; i <= 16; i++) {
+//        a.inserta(i, i);
+//    }
+//    
 //    a.mostrar(cout, 0, true);
 //    
 //    a.borra(8);
-//    
+//
 //    a.mostrar(cout, 0, true);
-//    
+//
 //    a.borra(9);
 //    
 //    a.mostrar(cout, 0, true);
@@ -118,11 +128,7 @@ void ejercicio4() {
 //    
 //    a.mostrar(cout, 0, true);
     
-    AVL<int, int> b;
-    
-    for ( int i = 1 ; i <= 16; i++) {
-        b.inserta(i, i);
-    }
+    AVL<int, int> b = generarArbol<int, int>(16, 1);
 
     b.mostrar(cout, 0, true);
     
@@ -140,8 +146,7 @@ void ejercicio4() {
     
     b.borra(7);
     
-    b.mostrar(cout, 0, true);
-    
+    b.mostrar(cout, 0, true);    
     
 //    AVL<int, int> c;
 //    
