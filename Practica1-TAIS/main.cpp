@@ -20,11 +20,19 @@ void verificarArbol(AVL<Clave, Valor> a) {
 }
 
 template <typename Clave, typename Valor>
+void verificarArbolAVL(AVL<Clave, Valor> a) {
+    
+    string estado = a.esAVLcorrecto() ? "true" : "false";
+    
+    std::cout << "Es avl correcto?: " << estado << endl;
+}
+
+template <typename Clave, typename Valor>
 AVL<Clave, Valor> generarArbol(const int numeros, const int incremento) {
     
     AVL<Clave, Valor> a;
     
-    for (int i = 0; i < numeros; i+=incremento) {
+    for (int i = 1; i <= numeros; i+=incremento) {
         a.inserta(i,i);
     }
     
@@ -108,11 +116,7 @@ void ejercicio3() {
 
 void ejercicio4() {
     
-//    AVL<int, int> a;
-//    
-//    for ( int i = 1 ; i <= 16; i++) {
-//        a.inserta(i, i);
-//    }
+//    AVL<int, int> a = generarArbol<int, int>(16, 1);
 //    
 //    a.mostrar(cout, 0, true);
 //    
@@ -128,49 +132,71 @@ void ejercicio4() {
 //    
 //    a.mostrar(cout, 0, true);
     
-    AVL<int, int> b = generarArbol<int, int>(16, 1);
+//    AVL<int, int> b = generarArbol<int, int>(16, 1);
+//
+//    b.mostrar(cout, 0, true);
+//    
+//    b.borra(4);
+//    
+//    b.mostrar(cout, 0, true);
+//    
+//    b.borra(5);
+//    
+//    b.mostrar(cout, 0, true);
+//    
+//    b.borra(6);
+//    
+//    b.mostrar(cout, 0, true);
+//    
+//    b.borra(7);
+//    
+//    b.mostrar(cout, 0, true);    
+    
+    AVL<int, int> c = generarArbol<int, int>(16, 1);
 
-    b.mostrar(cout, 0, true);
+    c.mostrar(cout, 0, true);
     
-    b.borra(4);
+    c.borra(4); cout << "BORRAR 4" << endl << endl;
     
-    b.mostrar(cout, 0, true);
+    verificarArbolAVL(c); cout << endl;
     
-    b.borra(5);
+    c.mostrar(cout, 0, true);
     
-    b.mostrar(cout, 0, true);
+    c.borra(12); cout << "BORRAR 12" << endl << endl;
     
-    b.borra(6);
+    verificarArbolAVL(c); cout << endl;
     
-    b.mostrar(cout, 0, true);
+    c.mostrar(cout, 0, true);
     
-    b.borra(7);
+    c.borra(1); cout << "BORRAR 1" << endl << endl;
     
-    b.mostrar(cout, 0, true);    
+    verificarArbolAVL(c); cout << endl;
     
-//    AVL<int, int> c;
-//    
-//    for ( int i = 1 ; i <= 16; i++) {
-//        c.inserta(i, i);
-//    }
-//    
-//    c.mostrar(cout, 0, true);
-//    
-//    c.borra(4);
-//    
-//    c.mostrar(cout, 0, true);
-//    
-//    c.borra(12);
-//    
-//    c.mostrar(cout, 0, true);
-//    
-//    c.borra(1);
-//    
-//    c.mostrar(cout, 0, true);
-//    
-//    c.borra(3);
-//    
-//    c.mostrar(cout, 0, true);
+    c.mostrar(cout, 0, true);
+    
+    c.borra(3); cout << "BORRAR 3" << endl << endl;
+    
+    verificarArbolAVL(c); cout << endl;
+    
+    c.mostrar(cout, 0, true);
+    
+    c.borra(5); cout << "BORRAR 5" << endl << endl;
+    
+    verificarArbolAVL(c); cout << endl;
+    
+    c.mostrar(cout, 0, true);
+    
+    c.borra(2); cout << "BORRAR 2" << endl << endl;
+    
+    verificarArbolAVL(c); cout << endl;
+    
+    c.mostrar(cout, 0, true);
+    
+    c.borra(7); cout << "BORRAR 7" << endl << endl;
+    
+    verificarArbolAVL(c); cout << endl;
+    
+    c.mostrar(cout, 0, true);
 }
 
 int main(int argc, const char * argv[])
