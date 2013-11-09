@@ -162,7 +162,7 @@ void ejercicio4() {
 //    
 //    c.mostrar(cout, 0, true);
     
-    int n = 300;
+    int n = 1000;
     srand((unsigned)time(0));
     
     AVL<int, int> arbol = generarArbol<int, int>(n, 1);
