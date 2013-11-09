@@ -116,87 +116,70 @@ void ejercicio3() {
 
 void ejercicio4() {
     
-//    AVL<int, int> a = generarArbol<int, int>(16, 1);
-//    
-//    a.mostrar(cout, 0, true);
-//    
-//    a.borra(8);
+//    AVL<int, int> c = generarArbol<int, int>(16, 1);
 //
-//    a.mostrar(cout, 0, true);
-//
-//    a.borra(9);
+//    c.mostrar(cout, 0, true);
 //    
-//    a.mostrar(cout, 0, true);
+//    c.borra(4); cout << "BORRAR 4" << endl << endl;
 //    
-//    a.borra(10);
+//    verificarArbolAVL(c); cout << endl;
 //    
-//    a.mostrar(cout, 0, true);
-    
-//    AVL<int, int> b = generarArbol<int, int>(16, 1);
-//
-//    b.mostrar(cout, 0, true);
+//    c.mostrar(cout, 0, true);
 //    
-//    b.borra(4);
+//    c.borra(12); cout << "BORRAR 12" << endl << endl;
 //    
-//    b.mostrar(cout, 0, true);
+//    verificarArbolAVL(c); cout << endl;
 //    
-//    b.borra(5);
+//    c.mostrar(cout, 0, true);
 //    
-//    b.mostrar(cout, 0, true);
+//    c.borra(1); cout << "BORRAR 1" << endl << endl;
 //    
-//    b.borra(6);
+//    verificarArbolAVL(c); cout << endl;
 //    
-//    b.mostrar(cout, 0, true);
+//    c.mostrar(cout, 0, true);
 //    
-//    b.borra(7);
+//    c.borra(3); cout << "BORRAR 3" << endl << endl;
 //    
-//    b.mostrar(cout, 0, true);    
+//    verificarArbolAVL(c); cout << endl;
+//    
+//    c.mostrar(cout, 0, true);
+//    
+//    c.borra(5); cout << "BORRAR 5" << endl << endl;
+//    
+//    verificarArbolAVL(c); cout << endl;
+//    
+//    c.mostrar(cout, 0, true);
+//    
+//    c.borra(2); cout << "BORRAR 2" << endl << endl;
+//    
+//    verificarArbolAVL(c); cout << endl;
+//    
+//    c.mostrar(cout, 0, true);
+//    
+//    c.borra(7); cout << "BORRAR 7" << endl << endl;
+//    
+//    verificarArbolAVL(c); cout << endl;
+//    
+//    c.mostrar(cout, 0, true);
     
-    AVL<int, int> c = generarArbol<int, int>(16, 1);
-
-    c.mostrar(cout, 0, true);
+    int n = 300;
+    srand((unsigned)time(0));
     
-    c.borra(4); cout << "BORRAR 4" << endl << endl;
+    AVL<int, int> arbol = generarArbol<int, int>(n, 1);
     
-    verificarArbolAVL(c); cout << endl;
+    verificarArbolAVL(arbol);
     
-    c.mostrar(cout, 0, true);
-    
-    c.borra(12); cout << "BORRAR 12" << endl << endl;
-    
-    verificarArbolAVL(c); cout << endl;
-    
-    c.mostrar(cout, 0, true);
-    
-    c.borra(1); cout << "BORRAR 1" << endl << endl;
-    
-    verificarArbolAVL(c); cout << endl;
-    
-    c.mostrar(cout, 0, true);
-    
-    c.borra(3); cout << "BORRAR 3" << endl << endl;
-    
-    verificarArbolAVL(c); cout << endl;
-    
-    c.mostrar(cout, 0, true);
-    
-    c.borra(5); cout << "BORRAR 5" << endl << endl;
-    
-    verificarArbolAVL(c); cout << endl;
-    
-    c.mostrar(cout, 0, true);
-    
-    c.borra(2); cout << "BORRAR 2" << endl << endl;
-    
-    verificarArbolAVL(c); cout << endl;
-    
-    c.mostrar(cout, 0, true);
-    
-    c.borra(7); cout << "BORRAR 7" << endl << endl;
-    
-    verificarArbolAVL(c); cout << endl;
-    
-    c.mostrar(cout, 0, true);
+    for ( int i = 1; i <= n; i++) {
+        
+        int random = (rand()%n)+1;
+        
+        arbol.borra(random);
+        
+        cout << "NUMERO A BORRAR: " << random << endl;
+        arbol.mostrar(cout, 0, true);
+        verificarArbolAVL(arbol);
+        cout << endl;
+    }
 }
 
 int main(int argc, const char * argv[])
